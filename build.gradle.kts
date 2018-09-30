@@ -1,5 +1,8 @@
 import org.gradle.internal.impldep.aQute.bnd.osgi.resource.Filters
+import org.jetbrains.kotlin.gradle.plugin.KotlinPluginWrapper
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+val kotlinVersion = plugins.getPlugin(KotlinPluginWrapper::class.java).kotlinPluginVersion
 
 buildscript {
     dependencies {
@@ -14,7 +17,7 @@ apply {
 
 
 plugins {
-    kotlin("jvm") version "1.2.51"
+    kotlin("jvm").version("1.2.51")
 }
 
 group = "eu.lumpy"
@@ -36,6 +39,8 @@ repositories {
 dependencies {
     compile(kotlin("stdlib-jdk8"))
     compile("khttp:khttp:0.1.0")
+    compile("io.vertx:vertx-core:3.5.3")
+    compile("io.vertx:vertx-lang-kotlin:3.5.3")
     testCompile("org.jetbrains.spek:spek-api:1.1.5")
     testCompile("junit:junit:4.11")
     testCompile("org.assertj:assertj-core:3.4.1")
