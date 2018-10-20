@@ -40,11 +40,16 @@ dependencies {
     compile(kotlin("stdlib-jdk8"))
     compile("khttp:khttp:0.1.0")
     compile("io.vertx:vertx-core:3.5.3")
+    compile("io.vertx:vertx-web:3.5.3")
     compile("io.vertx:vertx-lang-kotlin:3.5.3")
+    compile("org.litote.kmongo:kmongo:3.8.3")
     testCompile("org.jetbrains.spek:spek-api:1.1.5")
-    testCompile("junit:junit:4.11")
+    testCompile("junit:junit:4.12")
     testCompile("org.assertj:assertj-core:3.4.1")
+    testCompile("org.jetbrains.spek:spek-api:1.1.5")
     testRuntime("org.jetbrains.spek:spek-junit-platform-engine:1.1.5")
+    testCompile("org.junit.platform:junit-platform-runner:1.3.1")
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.3.1")
 }
 
 tasks.withType<KotlinCompile> {
