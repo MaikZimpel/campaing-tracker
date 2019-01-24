@@ -22,4 +22,10 @@ class EsiClientTest: Spek({
             println(client.allianceInfo(99005843))
         }
     }
+
+    describe("Get a list of all alliance ids") {
+        it("should print the ids of all alliances in eve") {
+            println(client.allianceInfo())
+        }
+    }
 })

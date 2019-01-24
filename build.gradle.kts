@@ -1,4 +1,3 @@
-import org.gradle.internal.impldep.aQute.bnd.osgi.resource.Filters
 import org.jetbrains.kotlin.gradle.plugin.KotlinPluginWrapper
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
@@ -42,11 +41,10 @@ dependencies {
     compile("io.vertx:vertx-core:3.5.3")
     compile("io.vertx:vertx-web:3.5.3")
     compile("io.vertx:vertx-lang-kotlin:3.5.3")
-    compile("org.litote.kmongo:kmongo:3.8.3")
+    compile( "io.vertx:vertx-mongo-client:3.6.2")
     testCompile("org.jetbrains.spek:spek-api:1.1.5")
     testCompile("junit:junit:4.12")
     testCompile("org.assertj:assertj-core:3.4.1")
-    testCompile("org.jetbrains.spek:spek-api:1.1.5")
     testRuntime("org.jetbrains.spek:spek-junit-platform-engine:1.1.5")
     testCompile("org.junit.platform:junit-platform-runner:1.3.1")
     testCompile("org.junit.jupiter:junit-jupiter-api:5.3.1")
